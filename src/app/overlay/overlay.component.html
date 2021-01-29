@@ -1,11 +1,11 @@
-<div *ngIf = "card" class="focusTaskContent" id="focusTC">
+<div *ngIf = "card" class="focusTaskContent" id={{card.Section}}>
     <button class="closeButton" (click)="closePopup();">
         <i class="fa fa-close"></i>
     </button>
     <textarea class="focusTaskText" id="focusTT" [(ngModel)]='card.Content'></textarea>
-    <button class="likeButton, fa fa-thumbs-up" id="likeB" onclick="likePopup()">+{{card.Likes}}
+    <button class="likeButton, fa fa-thumbs-up" id="likeB" (click)="likeCard()">+{{card.Likes}}
     </button>
-    <button class="deleteButton" onclick="deleteTask()">
+    <button class="deleteButton" (click) = "deleteCard()">
         <i class="fa fa-trash-o"></i>
     </button>
 </div>

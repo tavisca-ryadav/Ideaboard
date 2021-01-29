@@ -1,4 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
+import { getRandomInt, home } from './init-data';
 import { Card } from './models/card';
 
 @Component({
@@ -12,27 +13,13 @@ export class AppComponent {
 
   constructor(private renderer: Renderer2) { }
 
-sectionA: Card[] = [
-    {Content:"my name is",Likes:2},
-    {Content:"",Likes:4},
-    {Content:"",Likes:8},
-  ]
-
-sectionB: Card[] = [
-    {Content:"",Likes:1},
-    {Content:"",Likes:3},
-  ]
-
-sectionC: Card[] = [
-    {Content:"",Likes:0},
-    {Content:"",Likes:9},
-    {Content:"",Likes:5},
-  ]
+sectionA = home.sectionA;
+sectionB = home.sectionB;
+sectionC = home.sectionC;
 
 
   onSelect(card:Card):void{
     this.selectedCard = card;
-    console.log(card);
     let focusTask = document.getElementById("focusT")
     focusTask.style.display = 'block';
   }
@@ -41,19 +28,20 @@ sectionC: Card[] = [
   addCard(sec:string) 
   { 
     let addedCard:Card = {
+      Section:sec,
       Content:"",
-      Likes:0
+      Likes:0,
+      Id:getRandomInt(1000),
     };
-
     switch(sec){
       case "A":
-        this.sectionA = [...this.sectionA,addedCard];
+        home.sectionA.push(addedCard);
         break;
       case "B":
-        this.sectionB = [...this.sectionB,addedCard];
+        home.sectionB.push(addedCard);
         break;
       case "C":
-        this.sectionC = [...this.sectionC,addedCard];
+        home.sectionC.push(addedCard);
         break;
     }
   }

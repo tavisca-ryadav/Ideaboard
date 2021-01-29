@@ -40,19 +40,6 @@ body {
     resize:none;
 }
 
-
-#taskListContainer00 {
-    background: #C3EE8F;
-}
-
-#taskListContainer10 {
-    background: #FFFF88;
-}
-
-#taskListContainer20 {
-    background: #EED3FF;
-}
-
 .taskListTitleBar {
   display: flex;
   align-items: center;

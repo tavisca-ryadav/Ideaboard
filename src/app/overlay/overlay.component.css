@@ -73,3 +73,15 @@
     width: 0px; /* Remove scrollbar space */
     background: transparent; /* Optional: just make scrollbar invisible */
 }
+
+#A {
+    background: #C3EE8F;
+}
+
+#B {
+    background: #FFFF88;
+}
+
+#C {
+    background: #EED3FF;
+}
