@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Delius', 'Roboto', helvetica, cursive;
+    margin: 0.2em 0;
+}
+
+.container {
+  width: 100%;
+}
+.mainContainer {
+  margin: 24px;
+  padding: 12px;
+  border: 8px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height:650px;
+}
+.sectionTitleBar {
+  display: flex;
+  margin: 24px;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.sectionContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 24px;
+}
+.taskContent {
+    font-family: 'Delius', 'Roboto', helvetica, cursive;
+    border: none;
+    overflow: hidden;
+    background: border-box;
+    outline:none;
+    resize:none;
+}
+
+
+#taskListContainer00 {
+    background: #C3EE8F;
+}
+
+#taskListContainer10 {
+    background: #FFFF88;
+}
+
+#taskListContainer20 {
+    background: #EED3FF;
+}
+
+.taskListTitleBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 12px;
+}
+
+.taskTitleBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.taskListContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-gap: 12px;
+}
+
+.addButton {
+  background: lightgreen;
+  color: white;
+  border: 0;
+  font-size: 21px;
+  font-weight: 900;
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  cursor:pointer;
+  outline:none;
+}
+
+.focusTask {
+  display:None;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}

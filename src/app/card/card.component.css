@@ -1,0 +1,27 @@
+.taskContainer {
+    display: grid;
+    grid-template-rows: 20px 1fr 20px;
+    row-gap: 8px;
+    padding: 8px;
+    height: 130px;
+    background: skyblue;
+    border-radius: 4px;
+    box-shadow: 2px 3px 2px #c1c1c9;
+    cursor:grab;
+    position:relative;
+}
+
+.taskTextContent{
+    overflow:auto;
+    font-size:14px;
+    height:119px;
+}
+
+.likeCounter {
+    width:auto;
+    height:15px;
+    position:absolute;
+    bottom:2px;
+    left:2px; 
+    opacity:0.5;
+}
